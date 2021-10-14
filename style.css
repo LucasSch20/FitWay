@@ -1,9 +1,13 @@
+/*Formatação geral para toda a página:*/
+
 html {
     scroll-behavior: smooth;
 }
 * {
     font-family: 'Kodchasan', sans-serif;
 }
+
+/*-----*/
 
 b {
     font-weight: 700;
@@ -17,4 +21,9 @@ h2 {
 }
 p {
     font-size: smaller;
+}
+
+.logoSvg {
+    width: 25vh;
+    height: 25vw;
 }
