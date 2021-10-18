@@ -2,6 +2,12 @@
 
 html {
     scroll-behavior: smooth;
+    max-width: 100vw;
+    padding: 0;
+    margin: 0;
+}
+body {
+    width: 100%;
 }
 * {
     font-family: 'Kodchasan', sans-serif;
@@ -14,16 +20,76 @@ b {
 }
 
 h1 {
-    font-size: 6em;
+    font-size: 8em;
+    color: black;
 }
 h2 {
-    font-size: small;
+    font-size: 1.4em;
+}
+h3 {
+    font-size: 0.9em;
 }
 p {
     font-size: smaller;
 }
 
+.centerItem {
+    display: flex;
+    justify-content: center;
+}
+header {
+    height: 40vh;
+}
+
+/*Formatação css da logo:*/
+.logo {
+    display: flex;
+    justify-content: center;
+}
 .logoSvg {
-    width: 25vh;
-    height: 25vw;
+    width: 24vh;
+    color: black;
+}
+
+.logoEscrita {
+    position:relative;
+    display: block;
+    margin-right: 0;
+    width: 35vw;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.281);
+}
+
+.subSlogan {
+    display: flex;
+    justify-content: center;
+}
+
+/*-----*/
+
+/*formatação do container do form*/
+
+.mainMsg {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+.formInfo {
+    background-color: #7DCD85;
+    width: 40%;
+    height: auto;
+    border-radius: 2.5%;
+}
+/*-----*/
+
+.conteudoPrincipal {
+    background-color: #49683E;
+    color: #FCF7F8;
+    height: 100vh;
+}
+
+.conteudoRodape {
+    background-color: #80AB82;
+}
+
+.linhaMsg {
+    height: 10vh;
 }
