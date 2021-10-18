@@ -45,23 +45,30 @@ header {
 .logo {
     display: flex;
     justify-content: center;
+    height: 30vh;
 }
 .logoSvg {
-    width: 24vh;
+    width: 10vw;
     color: black;
+    display: flex;
+    align-items: bottom;
 }
 
 .logoEscrita {
     position:relative;
-    display: block;
+    display: flex;
+    align-items: bottom;
     margin-right: 0;
     width: 35vw;
+    height: 20vh;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.281);
 }
 
 .subSlogan {
     display: flex;
-    justify-content: center;
+    justify-content: top;
+    align-items: center;
+    height: 10vh;
 }
 
 /*-----*/
@@ -69,14 +76,21 @@ header {
 /*formatação do container do form*/
 
 .mainMsg {
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+}
+.linhaMsg {
+    height: 20vh;
+    display: flex;
+    align-items: center;
 }
 .formInfo {
     background-color: #7DCD85;
     width: 40%;
     height: auto;
     border-radius: 2.5%;
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 30px;
 }
 /*-----*/
 
@@ -84,12 +98,15 @@ header {
     background-color: #49683E;
     color: #FCF7F8;
     height: 100vh;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.185);
 }
 
 .conteudoRodape {
     background-color: #80AB82;
 }
 
-.linhaMsg {
-    height: 10vh;
+/*Formatação do Rodapé:*/
+
+footer {
+    height: 20vh;
 }
