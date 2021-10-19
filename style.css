@@ -20,7 +20,7 @@ b {
 }
 
 h1 {
-    font-size: 8em;
+    font-size: 8.4em;
     color: black;
 }
 h2 {
@@ -45,35 +45,51 @@ header {
 .logo {
     display: flex;
     justify-content: center;
-    height: 30vh;
+    align-items:flex-end;
+    height: 25vh;
 }
 .logoSvg {
     width: 10vw;
+    height: auto;
     color: black;
     display: flex;
     align-items: bottom;
 }
 
 .logoEscrita {
-    position:relative;
     display: flex;
-    align-items: bottom;
+    align-items: center;
+    justify-content: center;
     margin-right: 0;
     width: 35vw;
     height: 20vh;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.281);
 }
+.logoEscrita:hover {
+    cursor: default;
+}
 
 .subSlogan {
     display: flex;
     justify-content: top;
-    align-items: center;
-    height: 10vh;
+    align-items:flex-start;
+    height: 15vh;
+    margin-top: 20px;
+}
+.subSlogan:hover {
+    cursor: default;
 }
 
 /*-----*/
 
 /*formatação do container do form*/
+
+.conteudoPrincipal {
+    background-color: #49683E;
+    color: #FCF7F8;
+    height: 100vh;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.185);
+}
 
 .mainMsg {
 }
@@ -87,26 +103,71 @@ header {
     width: 40%;
     height: auto;
     border-radius: 2.5%;
-    padding-top: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 30px;
+    padding: 30px;
 }
+
+/*Formatação dos Inputs:*/
+.inputs {
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    margin-bottom: 20px;
+}
+.inputs p {
+    font-size: 0.9em;
+    font-weight: 700;
+    margin-right: 30px;
+    margin-bottom: 0;
+    width: auto;
+    height: auto;
+}
+.inputs p:hover {
+    cursor: default;
+}
+.inputs input {
+    width: 100%;
+    background-color: #fcf7f875;
+    border-color: #FCF7F8;
+    border-style:double;
+    border-width: 1px;
+    border-radius: 6px;
+}
+
+.btnCalcular {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.btnCalcular button {
+    width: 100%;
+    height: 60px;
+    border-style: none;
+    border-radius: 6px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.281);
+}
+.btnCalcular button:hover {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.281);
+}
+
+
+
 /*-----*/
 
-.conteudoPrincipal {
-    background-color: #49683E;
-    color: #FCF7F8;
-    height: 100vh;
-    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.185);
-}
 
-.conteudoRodape {
-    background-color: #80AB82;
-}
 
 /*Formatação do Rodapé:*/
 
 footer {
     height: 20vh;
+}
+.conteudoRodape {
+    background-color: #80AB82;
+}
+
+footer h3:hover {
+    cursor: default;
+}
+footer h3 b:hover {
+    cursor: pointer;
+    color:#FCF7F8;
 }
