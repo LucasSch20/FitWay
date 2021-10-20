@@ -46,7 +46,7 @@
         <div class="row linhaMsg">
             <div class="col-2"></div>
             <div class="col-8 centerItem mainMsg">
-                <h3>Coloque as suas informações aqui e nós fazemos toda a matemática chata🤓!</h3>
+                <h3>Coloque <b>suas informações </b>aqui e nós fazemos toda a matemática chata! 🤓</h3>
             </div>
             <div class="col-2"></div>
         </div>
@@ -56,39 +56,48 @@
             <div class="col-2"></div>
 
             <div class="col-8 centerItem">
+
+                <form class="formLoading" action="">
+                    <div class="loadingGif">
+
+                    </div>
+                </form>
+
                 <form class="formInfo" action="">
                     <div id="generoInput" class="inputs">
                         <p>Gênero:</p>
-                        <input type="radio">
+                        <input id="mascInput" type="radio" onclick="inputChangeMasc()">
                         <label for="masculino">Masculino</label>
-                        <input type="radio">
+                        <input id="femInput" type="radio" onclick="inputChangeFem()">
                         <label for="feminino">Feminino</label>
                     </div>
 
                     <div id="idadeInput" class="inputs">
                         <p>Idade:</p>
-                        <input type="text">
+                        <input type="number">
                     </div>
                     <div id="pesoInput" class="inputs">
-                        <p>Peso:</p>
-                        <input type="text">
+                        <p>Peso (Kg):</p>
+                        <input type="number">
                     </div>
                     <div id="alturaInput" class="inputs">
-                        <p>Altura (metros):</p>
-                        <input type="text">
+                        <p>Altura (cm):</p>
+                        <input type="number">
                     </div>
                     <div id="gorduraInput" class="inputs">
                         <p>% de Gordura (opcional):</p>
-                        <input type="text">
+                        <input type="number">
                     </div>
                     <div id="exercicioInput" class="inputs">
                         <p>Nível de atividade física:</p>
                         <input type="text">
                     </div>
                     <div id="calcularInput" class="btnCalcular">
-                        <button>Calcular</button>
+                        <button type="button" onclick="returnThings()">Calcular</button>
                     </div>
                 </form>
+
+
             </div>
 
             <div class="col-2"></div>
@@ -103,7 +112,7 @@
         <div class="row">
 
             <div class="col-4">
-                <h3>criado por <b>Lucas Lourenço Schimidt</b></h3>
+                <h3>criado por <b><a href="https://www.linkedin.com/in/lucas-louren%C3%A7o-schimidt-0316981b0/">Lucas Lourenço Schimidt</a> </b></h3>
             </div>
 
             <div class="col-4">
@@ -116,6 +125,7 @@
 
     </footer>
 
+    <script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>
