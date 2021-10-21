@@ -82,7 +82,7 @@ header {
 
 /*-----*/
 
-/*formatação do container do form*/
+/*formatação dos containers do form*/
 
 .conteudoPrincipal {
     background-color: #49683E;
@@ -98,8 +98,19 @@ header {
     display: flex;
     align-items: center;
 }
-.formInfo {
+
+#msgInicial {
     display: block;
+}
+#msgLoading {
+    display: none;
+}
+#msgFinal {
+    display: none;
+}
+
+.formInfo {
+    display: none;
     background-color: #7DCD85;
     width: 40%;
     height: auto;
@@ -108,6 +119,7 @@ header {
 }
 .formLoading {
     display: none;
+    opacity: 0;
     background-color:#7DCD85;
     width: 40%;
     height: 50vh;
@@ -115,8 +127,50 @@ header {
     align-items: center;
     justify-content: center;
 }
+.formResultado {
+    display: block;
+    opacity: 100;
+    background-color:#7DCD85;
+    width: 40%;
+    height: auto;
+    border-radius: 2.5%;
+    padding: 30px;
+    /* justify-content: center; */
+    margin: 5px;
+}
+#tituloForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flexResultado {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes infoDim {
+    from {
+        opacity: 100%;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@keyframes infoAum {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
 .loadingGif {
-    animation: loading 1s infinite;
+    animation: loading 0.8s infinite;
     width: 30px;
     height: 30px;
     border: 4px solid #c4c4c4;

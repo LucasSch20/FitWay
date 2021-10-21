@@ -46,7 +46,9 @@
         <div class="row linhaMsg">
             <div class="col-2"></div>
             <div class="col-8 centerItem mainMsg">
-                <h3>Coloque <b>suas informações </b>aqui e nós fazemos toda a matemática chata! 🤓</h3>
+                <h3 id="msgInicial">Coloque <b>suas informações </b>aqui e nós fazemos toda a matemática chata! 🤓</h3>
+                <h3 id="msgLoading">Só um momento que estamos processando suas informações. 😉</h3>
+                <h3 id="msgFinal">Aqui estão seus resultados. 😁</h3>
             </div>
             <div class="col-2"></div>
         </div>
@@ -56,6 +58,26 @@
             <div class="col-2"></div>
 
             <div class="col-8 centerItem">
+
+                <div class="flexResultado">
+                    <form class="formResultado" action="">
+                        <h3 id="tituloForm"><b>Seu Índice de Massa Corporal (IMC):</b></h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptates impedit ex, blanditiis facere sunt ratione porro aperiam esse animi quae inventore pariatur, debitis, laborum quam tempore a unde nam.</p>
+                    </form>
+                    <form class="formResultado" action="">
+                        <h3 id="tituloForm"><b>Seu Índice de Massa Corporal (IMC):</b></h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptates impedit ex, blanditiis facere sunt ratione porro aperiam esse animi quae inventore pariatur, debitis, laborum quam tempore a unde nam. lorem</p>
+                    </form>
+                    <form class="formResultado" action="">
+                        <h3 id="tituloForm"><b>Seu Índice de Massa Corporal (IMC):</b></h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptates impedit ex, blanditiis facere sunt ratione porro aperiam esse animi quae inventore pariatur, debitis, laborum quam tempore a unde nam.</p>
+                    </form>
+                    <form class="formResultado" action="">
+                        <h3 id="tituloForm"><b>Seu Índice de Massa Corporal (IMC):</b></h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptates impedit ex, blanditiis facere sunt ratione porro aperiam esse animi quae inventore pariatur, debitis, laborum quam tempore a unde nam.</p>
+                    </form>
+                </div>
+
 
                 <form class="formLoading" action="">
                     <div class="loadingGif">
@@ -72,28 +94,28 @@
                         <label for="feminino">Feminino</label>
                     </div>
 
-                    <div id="idadeInput" class="inputs">
+                    <div class="inputs">
                         <p>Idade:</p>
-                        <input type="number">
+                        <input id="idadeInput" type="number">
                     </div>
-                    <div id="pesoInput" class="inputs">
+                    <div class="inputs">
                         <p>Peso (Kg):</p>
-                        <input type="number">
+                        <input id="pesoInput" type="number">
                     </div>
-                    <div id="alturaInput" class="inputs">
+                    <div class="inputs">
                         <p>Altura (cm):</p>
-                        <input type="number">
+                        <input id="alturaInput" type="number">
                     </div>
-                    <div id="gorduraInput" class="inputs">
+                    <div class="inputs">
                         <p>% de Gordura (opcional):</p>
-                        <input type="number">
+                        <input id="gorduraInput" type="number">
                     </div>
-                    <div id="exercicioInput" class="inputs">
+                    <div class="inputs">
                         <p>Nível de atividade física:</p>
-                        <input type="text">
+                        <input id="exercicioInput" type="text">
                     </div>
-                    <div id="calcularInput" class="btnCalcular">
-                        <button type="button" onclick="returnThings()">Calcular</button>
+                    <div class="btnCalcular">
+                        <button id="calcularInput" type="button" onclick="checkInput()">Calcular</button>
                     </div>
                 </form>
 
