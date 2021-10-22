@@ -27,24 +27,29 @@ function loadLoadingForm() {
     let loadingForm = document.querySelector(".formLoading");
     let msgLoading = document.querySelector('#msgLoading');
     let msgInicial = document.querySelector('#msgInicial');
+    let flexResultado = document.querySelector('.flexResultado');
+    let formResultado = document.querySelector('.formResultado');
 
-    initialForm.style.animation = 'infoDim 1s';
+
+    initialForm.style.animation = 'infoAum 1s';
     if (initialForm.style.opacity == 0) {
 
         initialForm.style.display = 'none';
         loadingForm.style.display = 'flex';
         msgLoading.style.display = 'block';
         msgInicial.style.display = 'none';
-        loadingForm.style.animation = 'infoAum 1s';
         loadingForm.style.opacity = '100';
-        
+        setTimeout(function() {
+            loadingForm.style.display = 'none';
+            flexResultado.style.display = 'flex';
+            formResultado.style.display = 'block';
+            formResultado.style.opacity = 100;
+
+        }, 5000);
     }
 }
 
 //Função que chama os formulário das informações do usuário:
-function loadInfo() {
-    let loadingForm = document.querySelector(".formLoading");
-}
 
 //Função que checa se todos os campos do formulário de informações estão completos. Caso sim, ele vai executar a função anterior. Caso não, ele irá mostrar uma mensagem para o usuário.
 function checkInput() {

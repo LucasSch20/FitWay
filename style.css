@@ -87,7 +87,9 @@ header {
 .conteudoPrincipal {
     background-color: #49683E;
     color: #FCF7F8;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
+    padding-bottom: 30px;
     box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.185);
 }
 
@@ -110,7 +112,7 @@ header {
 }
 
 .formInfo {
-    display: none;
+    display: block;
     background-color: #7DCD85;
     width: 40%;
     height: auto;
@@ -118,6 +120,7 @@ header {
     padding: 30px;
 }
 .formLoading {
+    animation: infoAum 1s;
     display: none;
     opacity: 0;
     background-color:#7DCD85;
@@ -128,15 +131,16 @@ header {
     justify-content: center;
 }
 .formResultado {
-    display: block;
-    opacity: 100;
+    animation: infoAum 1s;
+    display: none;
+    opacity: 0;
     background-color:#7DCD85;
     width: 40%;
-    height: auto;
     border-radius: 2.5%;
     padding: 30px;
     /* justify-content: center; */
     margin: 5px;
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.185);
 }
 #tituloForm {
     display: flex;
@@ -144,12 +148,12 @@ header {
     align-items: center;
 }
 .flexResultado {
-    display: flex;
+    display: none;
     width: 100%;
     height: 100%;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
 }
 
 @keyframes infoDim {
