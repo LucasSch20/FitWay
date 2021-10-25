@@ -7,30 +7,37 @@ html {
     margin: 0;
 }
 body {
-    width: 100%;
+    width: 100vw;
+    overflow-x: hidden;
 }
 * {
     font-family: 'Kodchasan', sans-serif;
 }
 
+
 /*-----*/
+
+/* Formatação das fontes da página: */
 
 b {
     font-weight: 700;
 }
 
 h1 {
-    font-size: 8.4em;
+    font-size: max(90px, 10vw);
     color: black;
+    text-align: center;
 }
 h2 {
-    font-size: 1.4em;
+    font-size: max(20px, 1.5vw);
+    text-align: center;
 }
 h3 {
-    font-size: 0.9em;
+    font-size: max(15px, 1vw);
+    text-align: center;
 }
 p {
-    font-size: smaller;
+    font-size: max(15px, 1vw);
 }
 
 .centerItem {
@@ -49,30 +56,27 @@ header {
     height: 25vh;
 }
 .logoSvg {
-    width: 10vw;
+    width: max(90px, 10vw);
     height: auto;
     color: black;
     display: flex;
     align-items: bottom;
 }
-
 .logoEscrita {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: 0;
-    width: 35vw;
     height: 20vh;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.281);
 }
 .logoEscrita:hover {
     cursor: default;
 }
-
 .subSlogan {
     display: flex;
-    justify-content: top;
-    align-items:flex-start;
+    justify-content: center;
+    align-items: flex-start;
     height: 15vh;
     margin-top: 20px;
 }
@@ -93,8 +97,6 @@ header {
     box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.185);
 }
 
-.mainMsg {
-}
 .linhaMsg {
     height: 20vh;
     display: flex;
@@ -114,7 +116,7 @@ header {
 .formInfo {
     display: block;
     background-color: #7DCD85;
-    width: 40%;
+    width: 80%;
     height: auto;
     border-radius: 2.5%;
     padding: 30px;
@@ -124,7 +126,7 @@ header {
     display: none;
     opacity: 0;
     background-color:#7DCD85;
-    width: 40%;
+    width: 80%;
     height: 50vh;
     border-radius: 2.5%;
     align-items: center;
@@ -133,9 +135,9 @@ header {
 .formResultado {
     animation: infoAum 1s;
     display: none;
-    opacity: 0;
+    opacity: 100;
     background-color:#7DCD85;
-    width: 40%;
+    width: 100%;
     border-radius: 2.5%;
     padding: 30px;
     /* justify-content: center; */
@@ -149,7 +151,7 @@ header {
 }
 .flexResultado {
     display: none;
-    width: 100%;
+    width: 80%;
     height: 100%;
     flex-wrap: wrap;
     justify-content: center;
@@ -248,7 +250,12 @@ footer {
 footer h3:hover {
     cursor: default;
 }
-footer h3 b:hover {
+footer h3 a {
+    color: black;
+    text-decoration: none;
+}
+footer h3 a:hover {
     cursor: pointer;
     color:#FCF7F8;
+    text-decoration:underline;
 }

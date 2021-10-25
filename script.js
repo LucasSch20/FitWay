@@ -29,6 +29,7 @@ function loadLoadingForm() {
     let msgInicial = document.querySelector('#msgInicial');
     let flexResultado = document.querySelector('.flexResultado');
     let formResultado = document.querySelector('.formResultado');
+    let msgFinal = document.querySelector('#msgFinal');
 
 
     initialForm.style.animation = 'infoAum 1s';
@@ -44,12 +45,13 @@ function loadLoadingForm() {
             flexResultado.style.display = 'flex';
             formResultado.style.display = 'block';
             formResultado.style.opacity = 100;
+            msgLoading.style.display = 'none';
+            msgFinal.style.display = 'block';
 
         }, 5000);
     }
 }
 
-//Função que chama os formulário das informações do usuário:
 
 //Função que checa se todos os campos do formulário de informações estão completos. Caso sim, ele vai executar a função anterior. Caso não, ele irá mostrar uma mensagem para o usuário.
 function checkInput() {
@@ -68,4 +70,16 @@ function checkInput() {
     } else {
         return alert('Preencha todos os campos.');
     }
+}
+
+//Função que calcula o IMC e retorna uma string:
+
+function imcCalculo() {
+    let altura = document.querySelector('');
+    let peso = document.querySelector('');
+
+    let pesoAoQ = peso*peso;
+    let IMC = altura/pesoAoQ;
+
+    return IMC;
 }
