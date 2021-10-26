@@ -22,7 +22,7 @@
         <div class="row no-gutters">
             <div class="col-xm-2 col-1 no-gutters"></div>
 
-            <div class="col-xm-8 col-10 logo no-gutters">
+            <div class="col-xm-8 col-10 logo no-gutters" onclick="location.reload()">
                 <h1 class="logoEscrita "><b>Fit</b>Way</h1>
                 <img class="logoSvg" src="assets/treeleaf_83777.svg" alt="logoSvg">
             </div>
@@ -57,23 +57,23 @@
 
         <!--formulário que vai pegar as informações do usuário do site:-->
         <div class="row no-gutters">
-            <div class="col-sm-4 col-1 no-gutters"></div>
+            <div class="col-sm-2 col-1 no-gutters"></div>
 
-            <div class="col-sm-4 col-10 centerItem no-gutters">
+            <div class="col-sm-8 col-10 centerItem no-gutters">
 
                 <div class="flexResultado">
-                    <form class="formResultado" action="">
+                    <form class="formResultado" id="formResultadoIMC" action="">
                         <h3 id="tituloForm"><b>Seu Índice de Massa Corporal (IMC):</b></h3>
                         <p><br>O índice de massa corporal (ou IMC) é um indicador que avalia se você está dentro de um padrão de massa corporal em relação à sua altura.<br> <br>
 
                             Você pode checar as fórmulas e cálculos matemáticos aqui.<br> <br>
                             
-                            Segundo nossas contas, o seu IMC é de 24,5 e á considerado normal. Contudo, você deve levar em consideração que embora seja um bom caminho para começar, nem sempre este parâmetro pode classificar corretamente o seu corpo, uma vez que ele não utiliza informações sobre a sua composição corporal. </p>
+                            Segundo nossas contas, o seu IMC é de <i id="imcString"></i> e é considerado <i id="classificacaoString"></i>. Contudo, você deve levar em consideração que embora seja um bom caminho para começar, nem sempre este parâmetro pode classificar corretamente o seu corpo, uma vez que ele não utiliza informações sobre a sua composição corporal. </p>
                     </form>
-                    <form class="formResultado" action="">
+                    <form class="formResultado" id="formResultadoPorc" action="">
                         <h3 id="tituloForm"><b>Porcentagem de Gordura Corporal:</b></h3>
-                        <p>A porcentagem de gordura corporal é um parâmetro muito importante quando falamos de saúde.
-                            Uma pessoa com alta porcentagem de gordura em comparação com uma pessoa do mesmo peso, mas com uma baixa % de gordura corporal podem apresentar grandes diferenças, tanto estéticas quanto de saúde. Veja aqui um exemplo.
+                        <p><br>A porcentagem de gordura corporal é um parâmetro muito importante quando falamos de saúde.
+                            Uma pessoa com alta porcentagem de gordura em comparação com uma pessoa do mesmo peso, mas com uma baixa % de gordura corporal podem apresentar grandes diferenças, tanto estéticas quanto de saúde. Veja aqui um exemplo.<br> <br>
                          
                          Por conta disso, recomendamos que você junte as informações do seu IMC com a sua % de gordura corporal para ter uma visão geral mais completa.</p>
                     </form>
@@ -115,13 +115,13 @@
                         <input id="exercicioInput" type="text">
                     </div>
                     <div class="btnCalcular">
-                        <button id="calcularInput" type="button" onclick="checkInput()">Calcular</button>
+                        <button id="calcularInput" type="button" onclick="checkInput(), imcCalculo(document.querySelector('#alturaInput').value, document.querySelector('#pesoInput').value)">Calcular</button>
                     </div>
                 </form>
 
             </div>
 
-            <div class="col-sm-4 col-1 no-gutters"></div>
+            <div class="col-sm-2 col-1 no-gutters"></div>
         </div>
 
 

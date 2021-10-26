@@ -36,6 +36,10 @@ h3 {
     font-size: max(15px, 1vw);
     text-align: center;
 }
+i {
+    font-size: max(15px, 1vw);
+    font-weight: 700;
+}
 p {
     font-size: max(15px, 1vw);
 }
@@ -71,7 +75,13 @@ header {
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.281);
 }
 .logoEscrita:hover {
-    cursor: default;
+    cursor: pointer;
+}
+.logoSvg:hover {
+    cursor: pointer;
+}
+.logo:hover {
+    cursor: pointer;
 }
 .subSlogan {
     display: flex;
@@ -116,33 +126,51 @@ header {
 .formInfo {
     display: block;
     background-color: #7DCD85;
-    width: 80%;
+    width: 40%;
     height: auto;
     border-radius: 2.5%;
     padding: 30px;
+}
+@media (max-width: 576px) {
+    .formInfo {
+        width: 80%;
+    }
 }
 .formLoading {
     animation: infoAum 1s;
     display: none;
     opacity: 0;
     background-color:#7DCD85;
-    width: 80%;
+    width: 40%;
     height: 50vh;
     border-radius: 2.5%;
     align-items: center;
     justify-content: center;
 }
+@media (max-width: 576px) {
+    .formLoading {
+        width: 80%;
+    }
+}
 .formResultado {
     animation: infoAum 1s;
-    display: none;
     opacity: 100;
     background-color:#7DCD85;
-    width: 100%;
+    width: 40%;
     border-radius: 2.5%;
     padding: 30px;
     /* justify-content: center; */
     margin: 5px;
     box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.185);
+}
+#formResultadoIMC {
+    display: none;
+}
+#formResultadoPorc {
+    display: none;
+}
+#formResultadoTMB {
+    display: none;
 }
 #tituloForm {
     display: flex;
@@ -151,7 +179,7 @@ header {
 }
 .flexResultado {
     display: none;
-    width: 80%;
+    width: 100%;
     height: 100%;
     flex-wrap: wrap;
     justify-content: center;
