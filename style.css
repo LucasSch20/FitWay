@@ -13,7 +13,14 @@ body {
 * {
     font-family: 'Kodchasan', sans-serif;
 }
-
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(184, 184, 184);
+    border-radius: 10px;
+}
 
 /*-----*/
 
@@ -42,6 +49,17 @@ i {
 }
 p {
     font-size: max(15px, 1vw);
+}
+a {
+    color: white;
+    text-decoration: underline;
+    font-style: normal;
+}
+a:hover {
+    color: gray;
+}
+i {
+    text-decoration:none;
 }
 
 .centerItem {
@@ -131,11 +149,6 @@ header {
     border-radius: 2.5%;
     padding: 30px;
 }
-@media (max-width: 576px) {
-    .formInfo {
-        width: 80%;
-    }
-}
 .formLoading {
     animation: infoAum 1s;
     display: none;
@@ -147,8 +160,13 @@ header {
     align-items: center;
     justify-content: center;
 }
+
+/* Media query para ajustar as áreas dos containeres de informações e formulários: */
 @media (max-width: 576px) {
     .formLoading {
+        width: 80%;
+    }
+    .formInfo {
         width: 80%;
     }
 }
@@ -162,6 +180,11 @@ header {
     /* justify-content: center; */
     margin: 5px;
     box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.185);
+}
+@media (max-width: 700px) {
+    .formResultado {
+        width: 100%;
+    }
 }
 #formResultadoIMC {
     display: none;

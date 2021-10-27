@@ -12,6 +12,7 @@ var usuario = {
     "atividade": ""
 }
 
+// Funções que determinam se o usuário é masculino ou feminino, com base no input do form inicial:
 function inputChangeMasc() {
     return inputGeneroFem.checked = false, usuario.genero = "masculino";
 
@@ -29,7 +30,8 @@ function loadLoadingForm() {
     let msgInicial = document.querySelector('#msgInicial');
     let flexResultado = document.querySelector('.flexResultado');
     let formResultadoIMC = document.querySelector('#formResultadoIMC');
-    let formResultadoPorc = document.querySelector('#formResultadoPorc')
+    let formResultadoPorc = document.querySelector('#formResultadoPorc');
+    let formResultadoTMB = document.querySelector('#formResultadoTMB');
     let msgFinal = document.querySelector('#msgFinal');
 
 
@@ -46,14 +48,13 @@ function loadLoadingForm() {
             flexResultado.style.display = 'flex';
             formResultadoIMC.style.display = 'block';
             formResultadoPorc.style.display = 'block';
-            formResultado.style.opacity = 100;
-            msgLoading.style.display = 'none';
+            formResultadoTMB.style.display = 'block';
             msgFinal.style.display = 'block';
-
+            msgLoading.style.display = 'none';
+            formResultado.style.opacity = 100;
         }, 4000);
     }
 }
-
 
 //Função que checa se todos os campos do formulário de informações estão completos. Caso sim, ele vai executar a função anterior. Caso não, ele irá mostrar uma mensagem para o usuário.
 function checkInput() {
@@ -106,5 +107,44 @@ function imcCalculo(altura, peso) {
 
 
     console.log(classificacaoIMC);
-    return imcString.innerHTML = IMC.toString(), classificacaoString.innerHTML = classificacaoIMC;
+    return imcString.innerHTML = parseFloat(IMC.toFixed(1)).toString(), classificacaoString.innerHTML = classificacaoIMC;
+}
+
+//Função que calcula a TMB:
+
+function tmbCalculo() {
+    let idade = document.querySelector('#idadeInput').value;
+    let peso = document.querySelector('#pesoInput').value;
+    let altura = document.querySelector('#alturaInput').value;
+    let genero = usuario.genero;
+    let tmb;
+
+    let tmbString = document.querySelector('#tmbString');
+    let idadeString = document.querySelector('#idadeString');
+    let pesoString = document.querySelector('#pesoString');
+    let alturaString = document.querySelector('#alturaString');
+
+    if (genero === 'masculino') {
+        if (idade >= 10 && idade <= 18) {
+            tmb = 17.5 * peso + 651;
+        } else if (idade > 18 && idade <= 30) {
+            tmb = 15.3 * peso + 679;
+        } else if (idade > 30 && idade <= 60) {
+            tmb = 8.7 * peso + 879;
+        } else if (idade > 60) {
+            tmb = 13.5 * peso + 487;
+        }
+    } else {
+        if (idade >= 10 && idade <= 18) {
+            tmb = 12.2 * peso + 746;
+        } else if (idade > 18 && idade <= 30) {
+            tmb = 14.7 * peso + 496;
+        } else if (idade > 30 && idade <= 60) {
+            tmb = 8.7 * peso + 829;
+        } else if (idade > 60) {
+            tmb = 10.5 * peso + 596;
+        }
+    }
+
+    return tmbString.innerHTML = tmb.toString() + 'kcal', idadeString.innerHTML = idade.toString(), pesoString.innerHTML = peso.toString() + 'kg', alturaString.innerHTML = (altura / 100).toString();
 }
