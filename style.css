@@ -62,6 +62,16 @@ i {
     text-decoration:none;
 }
 
+select {
+    height: 28px;
+    width: 100%;
+    border-radius: 6px;
+    background-color: #fcf7f875;
+    border-color: #FCF7F8;
+    border-style:double;
+    border-width: 1px;
+}
+
 .centerItem {
     display: flex;
     justify-content: center;

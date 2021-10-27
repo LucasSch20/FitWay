@@ -103,23 +103,27 @@
 
                     <div class="inputs">
                         <p>Idade:</p>
-                        <input id="idadeInput" type="number">
+                        <input min=0 max=120 id="idadeInput" type="number">
                     </div>
                     <div class="inputs">
                         <p>Peso (Kg):</p>
-                        <input id="pesoInput" type="number">
+                        <input min=20 max=200 id="pesoInput" type="number">
                     </div>
                     <div class="inputs">
                         <p>Altura (cm):</p>
-                        <input id="alturaInput" type="number">
+                        <input min=50 max=400 id="alturaInput" type="number">
                     </div>
                     <div class="inputs">
                         <p>% de Gordura (opcional):</p>
-                        <input id="gorduraInput" type="number">
+                        <input min=2 max=50 id="gorduraInput" type="number">
                     </div>
                     <div class="inputs">
                         <p>Nível de atividade física:</p>
-                        <input id="exercicioInput" type="text">
+                        <select name="" id="">
+                            <option value="0">Baixo (1-2/semana)</option>
+                            <option value="1">Médio (2-3/semana)</option>
+                            <option value="2">Alto (4-5/semana)</option>
+                        </select>
                     </div>
                     <div class="btnCalcular">
                         <button id="calcularInput" type="button" onclick="checkInput(), imcCalculo(document.querySelector('#alturaInput').value, document.querySelector('#pesoInput').value), tmbCalculo()">Calcular</button>

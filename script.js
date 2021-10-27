@@ -63,12 +63,12 @@ function checkInput() {
     usuario.peso = document.querySelector("#pesoInput").value;
     usuario.altura = document.querySelector("#alturaInput").value;
     usuario.gordura = document.querySelector("#gorduraInput").value;
-    usuario.atividade = document.querySelector("#exercicioInput").value;
+    // usuario.atividade = document.querySelector("#exercicioInput").value;
 
     console.log(usuario);
 
     //Teste pra ver se os inputs estão vazios ou não:
-    if (usuario.genero != "" && usuario.idade > 0 && usuario.peso > 0 && usuario.altura > 0 && usuario.atividade != "") {
+    if (usuario.genero != "" && usuario.idade > 0 && usuario.peso > 0 && usuario.altura > 0) {
         return loadLoadingForm();
     } else {
         return alert('Preencha todos os campos.');
